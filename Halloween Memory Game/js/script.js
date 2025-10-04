@@ -110,11 +110,11 @@ function checkMatch() {
             clearInterval(timerInterval);
             setTimeout(() => {
                 if (currentLevel < maxLevel) {
-                    alert(`Level ${currentLevel} completed! 🎉 Moving to next level.`);
+                    alert(`Level ${currentLevel} completed! \u{1F389} Moving to next level.`);
                     currentLevel++;
                     initGame();
                 } else {
-                    alert(`🏆 You won all levels in ${moves} moves and ${timer} seconds!`);
+                    alert(`\u{1F3C6} You won all levels in ${moves} moves and ${timer} seconds!`);
                     currentLevel = 1;
                     initGame();
                 }

@@ -70,7 +70,7 @@ function checkMatch() {
 
     if (matchedCount === cards.length) {
       setTimeout(() => {
-        alert(`You won in ${moves} moves! 🎉`);
+        alert(`You won in ${moves} moves! \u{1F389}`);
       }, 500);
     }
   } else {

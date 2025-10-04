@@ -1,0 +1,93 @@
+<!--
+  Project: Starlyware Star Collector
+  Author: Gianluca Grasso (https://github.com/gian-grasso)
+  License: http://www.apache.org/licenses/LICENSE-2.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Gianluca Grasso">
+  <meta name="generator" content="StarlyCode Studio">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Starlyware Star Collector</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.starlyware.com//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.starlyware.com//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.starlyware.com//favicon-16x16.png">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <div class="star-logo" aria-hidden="true">&#9733;</div>
+        <div class="brand-text">
+          <h1>Starlyware</h1>
+          <div class="tag">Star Collector</div>
+        </div>
+      </div>
+
+      <div class="ui">
+        <div class="ui-item score">
+          <span class="icon" aria-hidden="true">&#9733;</span>
+          <span>Score: <strong id="score">0</strong></span>
+        </div>
+        <div class="ui-item level">
+          <span class="icon" aria-hidden="true">&#128640;</span>
+          <span>Level: <strong id="level">1</strong></span>
+        </div>
+        <div class="ui-item lives">
+          <span class="icon" aria-hidden="true">&#10084;</span>
+          <span>Lives: <strong id="lives">3</strong></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="gameCanvas" width="900" height="600" aria-label="Star Collector game area"></canvas>
+
+      <aside class="controls">
+        <div class="controls-box">
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="restartBtn" class="btn">Restart</button>
+        </div>
+
+        <div class="instructions">
+          <h3>How to Play</h3>
+          <ul>
+            <li>Move the ship with ← → or touch/drag (mobile).</li>
+            <li>Collect blue stars to gain points.</li>
+            <li>Avoid meteors — you lose a life if hit.</li>
+            <li>Collect special stars for power-ups.</li>
+            <li>Levels increase difficulty over time.</li>
+          </ul>
+        </div>
+
+        <div class="footer-info">
+          <div>Highscore: <strong id="highscore">0</strong></div>
+        </div>
+      </aside>
+    </main>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-card">
+        <h2 id="overlay-title">Star Collector</h2>
+        <p id="overlay-msg">Collect stars and beat your highscore!</p>
+        <div class="overlay-actions">
+          <button id="overlay-start" class="btn primary">Play</button>
+          <button id="overlay-close" class="btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+    <label>Built by Starlyware with &#10084;&#65039;</label>
+    </footer>
+  </div>
+
+  <script src="js/game.js" defer></script>
+</body>
+</html>
